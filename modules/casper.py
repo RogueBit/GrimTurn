@@ -52,9 +52,11 @@ def casper():
                             print(wcolors.color.GREEN + "Setting hostname => " + cmd)
                             retVal = subprocess.call(cmd, stdin=None, stdout=None, stderr=None, shell=True, timeout=None)
                             cmd = "hostname {}".format(raname)
+                            print(wcolors.color.GREEN + "Setting hostname => " + cmd)
                             retVal = subprocess.call(cmd, stdin=None, stdout=None, stderr=None, shell=True, timeout=None)
                             cmd = 'echo {} >/etc/hostname'.format(raname)
                             retVal = subprocess.call(cmd, stdin=None, stdout=None, stderr=None, shell=True, timeout=None)
+                            print(wcolors.color.GREEN + "Setting hostname => " + cmd)
                         cmd = "ip link set down " + options[0] + " && macchanger --mac=" + trumac + " " + options[0] + " && ip link set up " + options[0]
                         print(wcolors.color.GREEN + "Setting MAC => " + cmd)
                         retVal = subprocess.call(cmd, stdin=None, stdout=None, stderr=None, shell=True, timeout=None)
